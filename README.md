@@ -37,7 +37,7 @@ To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark M
   --color-primary: hsl(var(--primary-hsl));
   --color-sidebar: hsl(var(--bg-hsl));
 }
-
+```
 
 **3. Standalone UI Orchestration (Angular)** 
 
@@ -47,3 +47,20 @@ Created a decoupled SidebarComponent and reusable MetricCardComponent.
 
 Implemented modern Angular Signals (signal()) to prep the UI for zero-latency reactive data streams.
 
+
+## 📸 Visual Impact: Figma-to-Code Execution
+
+Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics dashboard.
+
+| **Before (Generic Shell)** | **After (Custom Design System Applied)** |
+| :---: | :---: |
+| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | <img src="assets/after%201.png" width="400" alt="New Premium UI state"> |
+
+*(Confidentiality Note: Logos, specific artist data, and proprietary branding have been sanitized or redacted to comply with NDA policies. This showcase focuses purely on UI implementation).*
+
+## 🚀 Key Technologies
+
+* **Angular 19** (Standalone Components, Signals)
+* **Tailwind CSS v4** (Advanced `@theme inline` API, HSL variables)
+* **TypeScript** (Strict Mode)
+* **Figma** (Design Token Extraction)
