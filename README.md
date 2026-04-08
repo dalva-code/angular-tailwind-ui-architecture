@@ -22,6 +22,21 @@ To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark M
 
 **Technical Snippet:**
 
+/* Decoupled variables prevent v4 compiler crashes */
+@layer base {
+  :root {
+    --bg-hsl: 240 38% 6%; /* Proprietary Dark Tone */
+    --primary-hsl: 265 98% 56%; /* Accent Neon */
+  }
+}
+
+/* Modern Theme Mapping (Figma tokens to utility classes) */
+@theme inline {
+  --color-background: hsl(var(--bg-hsl));
+  --color-primary: hsl(var(--primary-hsl));
+  --color-sidebar: hsl(var(--bg-hsl));
+}
+
 
 
 
@@ -38,7 +53,11 @@ Implemented modern Angular Signals (signal()) to prep the UI for zero-latency re
 Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics dashboard.
 
 Before (Generic Shell)	After (Custom Design System Applied)
-<img src="assets/before%201.png" width="400" alt="Initial UI state">	<img src="assets/after%201.png" width="400" alt="New Premium UI state">
+<img src="assets/before%201.png" width="400" alt="Initial UI state">	
+<img src="assets/before%202.png" width="400" alt="Initial UI state">	
+
+
+<img src="assets/after%201.png" width="400" alt="New Premium UI state">
 
 
 
