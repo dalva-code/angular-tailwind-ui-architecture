@@ -38,3 +38,12 @@ To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark M
   --color-sidebar: hsl(var(--bg-hsl));
 }
 
+
+**3. Standalone UI Orchestration (Angular)** 
+
+I refactored the core views away from traditional module-based routing into Angular 19 Standalone Components (standalone: true).
+
+Created a decoupled SidebarComponent and reusable MetricCardComponent.
+
+Implemented modern Angular Signals (signal()) to prep the UI for zero-latency reactive data streams.
+
