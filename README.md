@@ -1,12 +1,12 @@
-#Case Study: Scalable UI Architecture & Resilient Frontend Design 🎵
+# Case Study: Scalable UI Architecture & Resilient Frontend Design 🎵
 **Project:** Proprietary Music Analytics Dashboard (NDA)
 
 **Role:** Technical Lead / Frontend Developer
 
-##📌 Overview
+## 📌 Overview
 Building upon my experience in architecting high-end interfaces for the music industry, this case study documents the modernization of a complex analytics dashboard. The objective was to migrate a high-fidelity Figma design system into a scalable codebase, ensuring a premium "Dark Glassmorphism" aesthetic while future-proofing the technology stack against third-party API failures.
 
-##🛠️ The Technical Challenges
+## 🛠️ The Technical Challenges
 
 **1. Design Token Volatility (Tailwind v4 Beta):** The project required migrating to the newly released Tailwind CSS v4. The architectural challenge was that v4 drastically changed how custom themes and CSS variables are processed. Injecting complex HSL color variables with opacity channels directly into standard theme blocks caused critical compiler crashes.
 
@@ -14,7 +14,7 @@ Building upon my experience in architecting high-end interfaces for the music in
 
 **3. Third-Party API Instability (Spotify/Tidal):** During critical demo sprints, primary data aggregators dropped crucial data points (e.g., Music Genres) and returned empty arrays, threatening to break the UI and leave empty, broken layouts.
 
-##💡 The Solution (Architectural Approach)
+## 💡 The Solution (Architectural Approach)
 ##1. 3-Layer Design Token Engine (CSS Architecture)
 
 To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark Mode, I engineered a strict 3-layer CSS foundation. I separated the raw HSL mathematical values (@layer base) from the utility class mapping (@theme inline).
@@ -65,7 +65,7 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 
 (Confidentiality Note: Logos, specific artist data, and proprietary branding have been sanitized or redacted to comply with NDA policies. This showcase focuses purely on UI implementation).
 
-🚀 Key Technologies
+# 🚀 Key Technologies
 Angular 19 (Standalone Components, Signals, Computed Properties)
 
 Tailwind CSS v4 (Advanced @theme inline API, HSL variables)
