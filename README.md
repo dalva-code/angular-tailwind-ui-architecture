@@ -38,22 +38,25 @@ To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark M
 }
 ```
 
-**2. Standalone UI Orchestration (Angular)**
+**4. Native-First DX & Reverse Proxying**
 
-I refactored the core views away from traditional module-based routing into Angular 19 Standalone Components (standalone: true).
+I migrated the workflow from Docker-heavy environments to a Native-First approach. By implementing a Custom Reverse Proxy (proxy.conf.json), I enabled the local Angular environment to communicate securely with Staging APIs, bypassing CORS and reducing HSR (Hot Suite Reload) time from minutes to milliseconds.
 
-Created a decoupled SidebarComponent and reusable MetricCardComponent.
+**5. Silent Failure Mitigation & Resilient States**
 
-Implemented modern Angular Signals (signal()) and computed properties to prep the UI for zero-latency reactive data streams.
+I refactored critical components to implement Silent Failure Patterns. For instance, the Ad-Placement engine was updated to catch 403 errors gracefully, ensuring that an invalid API key in a sub-service never compromises the stability or the visual integrity of the main dashboard.
 
-**3. Graceful Degradation & Resilient UI States**
+**6. Advanced Git Flow & Environment Hygiene**
 
-To counter the unpredictability of third-party APIs, I implemented strict fallback strategies using TypeScript and Angular control flow. When backend services failed to deliver required metadata, the UI gracefully degraded to render static, brand-aligned fallback badges, ensuring the application remained visually complete for stakeholder demonstrations without throwing console errors.
+To maintain a high-quality codebase in a multi-developer team, I implemented:
 
-**4. Advanced Empty State Management**
+Linear History Management: Systematic use of Git Rebase and Git Stash to resolve upstream conflicts without polluting the commit history.
 
-Designed and integrated a global search architecture with a specific focus on "Not Found" states. Instead of dead ends, empty search queries trigger a proactive "Suggest Missing Artist" modal, transforming a lack of data into a user engagement opportunity.
+Configuration Isolation: Strict environment hygiene to ensure local-only files (proxy.conf.json, Docker overrides) remain untracked, protecting the production pipeline.
 
+**7. Stakeholder-Driven Navigation Refactoring**
+
+Responding to business requirements, I decoupled the navigation logic. I elevated "Charts" to a primary architectural level and used Angular Declarative Routing (routerLinkActive) to provide real-time visual feedback on user location within the analytics group.
 
 ## 📸 Visual Impact: Figma-to-Code Execution
 
@@ -63,15 +66,15 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 | :---: | :---: |
 | <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | <img src="assets/after%201.png" width="400" alt="New Premium UI state"> |
 
-(Confidentiality Note: Logos, specific artist data, and proprietary branding have been sanitized or redacted to comply with NDA policies. This showcase focuses purely on UI implementation).
+(Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).
 
-# 🚀 Key Technologies
-Angular 19 (Standalone Components, Signals, Computed Properties)
+🚀 Key Technologies
+Frontend Core: Angular 19 (Standalone Components, Signals, Computed Properties).
 
-Tailwind CSS v4 (Advanced @theme inline API, HSL variables)
+Styling: Tailwind CSS v4 (Advanced @theme inline API), Glassmorphism Design Patterns.
 
-TypeScript (Strict Mode, Interface Data Mocking)
+DevOps & DX: Custom Reverse Proxies, Native Development Workflow, Multi-Environment Staging (--configuration staging).
 
-Git Version Control (Agile feature branching, safe environment staging)
+Version Control: Advanced Git (Rebase/Stash workflow, linear history maintenance).
 
-Figma (Design Token Extraction & UI Matching)
+Design: Figma (Design Token Extraction & UI Matching).
