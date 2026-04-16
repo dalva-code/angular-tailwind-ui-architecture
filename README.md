@@ -72,10 +72,8 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 
 | **Before (Generic Shell)** | **After (Custom Design System Applied)** |
 | :---: | :---: |
-| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | <img src="assets/after%201.png" width="400" alt="New Premium UI state"> |
+| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | 
 
-## 📸 Visual Impact: Figma-to-Code Execution
-*Transforming a generic structure into a premium, brand-aligned analytics dashboard.*
 
 ### 1. Artist Rankings Comparison
 | **Before (April 16th - Legacy UI)** | **After (April 16th - Refactored UI)** |
