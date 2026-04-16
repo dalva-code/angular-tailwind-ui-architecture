@@ -70,9 +70,9 @@ Responding to business requirements, I decoupled the navigation logic. I elevate
 
 Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics dashboard.
 
-| **Before (Generic Shell)** | **After (Custom Design System Applied)** |
-| :---: | :---: |
-| <img src="assets/before%201.png" width="200" alt="Generic Shell 1"> <img src="assets/before%202.png" width="200" alt="Generic Shell 2"> | <img src="assets/Despues%2016%20abril.png" width="450" alt="New Refactored UI"> |
+| **Before (Generic Shell)** |
+| :---: |
+| <img src="assets/before%201.png" width="200" alt="Legacy UI 1"> <img src="assets/before%202.png" width="200" alt="Legacy UI 2"> |
 
 ### 1. Artist Rankings Comparison
 | **After (April 16th - Refactored UI)** |
@@ -87,7 +87,6 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 | *Sanitized profile view using Signal-driven metrics.* | *Refactored sidebar using decoupled navigation logic.* |
 
 (Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).
-
 🚀 Key Technologies
 Frontend Core: Angular 19 (Standalone Components, Signals, Computed Properties).
 
