@@ -72,20 +72,20 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 
 | **Before (Generic Shell)** | **After (Custom Design System Applied)** |
 | :---: | :---: |
-| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | 
-
+| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | <img src="assets/Despues%2016%20abril.png" width="450" alt="New Refactored UI"> |
 
 ### 1. Artist Rankings Comparison
-| **Before (April 16th - Legacy UI)** | **After (April 16th - Refactored UI)** |
-| :---: | :---: |
-| <img src="assets/Antes%2016%20de%20abril.jpg" width="450"> | <img src="assets/Despues%2016%20abril.jpg" width="450"> |
-| *Generic shell with inconsistent spacing and monolithic structure.* | *Modern "Dark Glassmorphism" with signal-based real-time updates.* |
+| **After (April 16th - Refactored UI)** |
+| :---: |
+| <img src="assets/Despues%2016%20abril.png" width="600" alt="Modern Ranking View"> |
+| *Modern "Dark Glassmorphism" with signal-based real-time updates.* |
 
 ### 2. Artist Detail & Profile Resilience
 | **Artist Profile View** | **Sidebar Deep-Dive** |
 | :---: | :---: |
-| <img src="assets/Despues%2016%20abril1.jpg" width="450"> | <img src="assets/Despues%2016%20abril2.png" width="450"> |
+| <img src="assets/Despues%2016%20abril1.png" width="450" alt="Profile View"> | <img src="assets/Despues%2016%20abril2.png" width="450" alt="Sidebar View"> |
 | *Sanitized profile view using Signal-driven metrics.* | *Refactored sidebar using decoupled navigation logic.* |
+
 (Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).
 
 🚀 Key Technologies
