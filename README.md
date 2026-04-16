@@ -14,10 +14,18 @@ Building upon my experience in architecting high-end interfaces for the music in
 
 **3. Third-Party API Instability (Spotify/Tidal):** During critical demo sprints, primary data aggregators dropped crucial data points (e.g., Music Genres) and returned empty arrays, threatening to break the UI and leave empty, broken layouts.
 
-## 💡 The Solution (Architectural Approach)
-##1. 3-Layer Design Token Engine (CSS Architecture)
+**4. Demo Reliability & Environment Parity:** During critical stakeholder previews, backend instability often led to "broken" UI states. The challenge was to maintain a high-fidelity experience for design reviews without depending on live (and often failing) Staging APIs.
+
+## 💡 The Solutions 
+
+## 1. 3-Layer Design Token Engine (CSS Architecture)
 
 To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark Mode, I engineered a strict 3-layer CSS foundation. I separated the raw HSL mathematical values (@layer base) from the utility class mapping (@theme inline).
+
+## 4 .Centralized Resilience Engine (The "Bunker Mode")
+I engineered a centralized Feature Flag system using Angular’s environment injection. By decoupling the Data Services from the API layer, I implemented a "Bunker Mode" toggle.
+
+Technical Implementation: When enabled, the application bypasses failing network requests and serves high-fidelity Mock Data through the same RxJS streams, ensuring a flawless UI presentation even in total offline/error states.
 
 **Technical Snippet:**
 
