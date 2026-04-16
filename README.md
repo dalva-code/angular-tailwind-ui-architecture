@@ -70,9 +70,9 @@ Responding to business requirements, I decoupled the navigation logic. I elevate
 
 Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics dashboard.
 
-| **Before (Generic Shell)** | **After (Custom Design System Applied)** |
+| **Before (Generic Shell)** |
 | :---: | :---: |
-| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | <img src="assets/Despues%2016%20abril.png" width="450" alt="New Refactored UI"> |
+| <img src="assets/before%201.png" width="400" alt="Initial UI state 1"><br><br><img src="assets/before%202.png" width="400" alt="Initial UI state 2"> | 
 
 ### 1. Artist Rankings Comparison
 | **After (April 16th - Refactored UI)** |
