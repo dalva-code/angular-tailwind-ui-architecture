@@ -68,24 +68,23 @@ Responding to business requirements, I decoupled the navigation logic. I elevate
 
 ## 📸 Visual Impact: Figma-to-Code Execution
 
-Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics dashboard.
+Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics Here is a side-by-side comparison demonstrating the architectural shift from a generic layout to a fully customized, brand-aligned analytics dashboard.
 
 | **Before (Generic Shell)** |
 | :---: |
 | <img src="assets/before%201.png" width="500" alt="Legacy UI 1"> <img src="assets/before%202.png" width="500" alt="Legacy UI 2"> |
 
 ### 1. Artist Rankings Comparison
-| **After (April 16th - Refactored UI)** |**Song Charts**|
-| :---: |:---: |
-| <img src="assets/Despues%2016%20abril.pngv=2" width="400" alt="Modern Ranking View"> |<img src="assets/Depues%2016%20abril3.pngv=2" width="400" alt="Sidebar View"> |
-| *Modern "Dark Glassmorphism" with signal-based real-time updates.* |*Refactored song charts.* |
+| **After (April 16th - Refactored UI)** | **Song Charts** |
+| :---: | :---: |
+| <img src="assets/Despues%2016%20abril.png?v=2" width="400" alt="Modern Ranking View"> | <img src="assets/Despues%2016%20abril3.png?v=2" width="400" alt="Sidebar View"> |
+| *Modern "Dark Glassmorphism" with signal-based real-time updates.* | *Refactored song charts.* |
 
 ### 2. Artist Detail & Profile Resilience
 | **Artist Profile View** | **Sidebar Deep-Dive** |
 | :---: | :---: |
-| <img src="assets/Despues%2016%20abril1.pngv=2" width="450" alt="Profile View"> | <img src="assets/Despues%2016%20abril2.pngv=2" width="450" alt="Sidebar View"> |
+| <img src="assets/Despues%2016%20abril1.png?v=2" width="450" alt="Profile View"> | <img src="assets/Despues%2016%20abril2.png?v=2" width="450" alt="Sidebar View"> |
 | *Sanitized profile view using Signal-driven metrics.* | *Refactored sidebar using decoupled navigation logic.* |
-
 (Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).
 🚀 Key Technologies
 Frontend Core: Angular 19 (Standalone Components, Signals, Computed Properties).
