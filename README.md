@@ -72,7 +72,7 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 
 | **Before (Generic Shell)** |
 | :---: |
-| <img src="assets/before%201.png" width="400" alt="Legacy UI 1"> <img src="assets/before%202.png" width="400" alt="Legacy UI 2"> |
+| <img src="assets/before%201.png" width="500" alt="Legacy UI 1"> <img src="assets/before%202.png" width="500" alt="Legacy UI 2"> |
 
 ### 1. Artist Rankings Comparison
 | **After (April 16th - Refactored UI)** |
