@@ -77,15 +77,16 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 ### 1. Artist Rankings Comparison
 | **After (April 16th - Refactored UI)** | **Song Charts** |
 | :---: | :---: |
-| <img src="assets/Despues%2016%20abril.png?v=2" width="400" alt="Modern Ranking View"> | <img src="assets/Despues%2016%20abril3.png?v=2" width="400" alt="Sidebar View"> |
+| <img src="assets/Despues%20.png" width="400" alt="Modern Ranking View"> | <img src="assets/Despues3.png" width="400" alt="Song Charts View"> |
 | *Modern "Dark Glassmorphism" with signal-based real-time updates.* | *Refactored song charts.* |
 
 ### 2. Artist Detail & Profile Resilience
 | **Artist Profile View** | **Sidebar Deep-Dive** |
 | :---: | :---: |
-| <img src="assets/Despues%2016%20abril1.png?v=2" width="450" alt="Profile View"> | <img src="assets/Despues%2016%20abril2.png?v=2" width="450" alt="Sidebar View"> |
+| <img src="assets/Despues1.png" width="450" alt="Profile View"> | <img src="assets/Despues2.png" width="450" alt="Sidebar View"> |
 | *Sanitized profile view using Signal-driven metrics.* | *Refactored sidebar using decoupled navigation logic.* |
-(Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).
+
+*(Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).*
 
 
 ### 🚀 Key Technologies
