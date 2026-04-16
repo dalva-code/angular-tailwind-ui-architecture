@@ -22,7 +22,7 @@ Building upon my experience in architecting high-end interfaces for the music in
 
 To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark Mode, I engineered a strict 3-layer CSS foundation. I separated the raw HSL mathematical values (@layer base) from the utility class mapping (@theme inline).
 
-**4 .Centralized Resilience Engine (The "Bunker Mode")**
+**4. Centralized Resilience Engine (The "Bunker Mode")**
 I engineered a centralized Feature Flag system using Angular’s environment injection. By decoupling the Data Services from the API layer, I implemented a "Bunker Mode" toggle.
 
 Technical Implementation: When enabled, the application bypasses failing network requests and serves high-fidelity Mock Data through the same RxJS streams, ensuring a flawless UI presentation even in total offline/error states.
