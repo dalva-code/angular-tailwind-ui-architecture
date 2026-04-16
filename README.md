@@ -77,7 +77,7 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 ### 1. Artist Rankings Comparison
 | **After (April 16th - Refactored UI)** |**Song Charts**|
 | :---: |:---: |
-| <img src="assets/Despues%2016%20abril.png" width="400" alt="Modern Ranking View"> |<img src="assets/Despues%2016%20abril3.png" width="400" alt="Sidebar View"> |
+| <img src="assets/Despues%2016%20abril.png" width="400" alt="Modern Ranking View"> |<img src="assets/Depues%2016%20abril3.png" width="400" alt="Sidebar View"> |
 | *Modern "Dark Glassmorphism" with signal-based real-time updates.* |*Refactored song charts.* |
 
 ### 2. Artist Detail & Profile Resilience
