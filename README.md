@@ -86,7 +86,9 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 | <img src="assets/Despues%2016%20abril1.png?v=2" width="450" alt="Profile View"> | <img src="assets/Despues%2016%20abril2.png?v=2" width="450" alt="Sidebar View"> |
 | *Sanitized profile view using Signal-driven metrics.* | *Refactored sidebar using decoupled navigation logic.* |
 (Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).
-🚀 Key Technologies
+
+
+### 🚀 Key Technologies
 Frontend Core: Angular 19 (Standalone Components, Signals, Computed Properties).
 
 Styling: Tailwind CSS v4 (Advanced @theme inline API), Glassmorphism Design Patterns.
