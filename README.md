@@ -1,6 +1,6 @@
 # Case Study: Scalable UI Architecture & Resilient Frontend Design 🎵
 **Project:** Proprietary Music Analytics Dashboard (NDA)
-
+ 
 **Role:** Technical Lead / Frontend Developer
 
 ## 📌 Overview
