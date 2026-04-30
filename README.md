@@ -88,7 +88,7 @@ Responding to business requirements, I decoupled the navigation logic. I elevate
 
 **11. Signal-Based Multi-Directional Sorting Logic**
 To handle high-performance table re-ordering, I engineered a sorting engine using Angular Signals and Computed properties.
-- **Logic:** The engine detects data types (numerical vs. string handles) and applies a custom `Null-Sink` algorithm.
+- **Logic:** The engine intelligently discerns between data types (numerical vs. string handles) and applies a custom `Null-Sink` algorithm.
 - **Result:** This ensures that "dirty" values (N/A or 0) are mathematically forced to the end of the list regardless of sort direction, maintaining a premium look for the Top Rankings at all times.
 
 
@@ -119,13 +119,9 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 
 
 ### 🚀 Key Technologies
-**Frontend Core:** Angular 19 (Standalone Components, Signals, Computed Properties).
 
-**Styling:** Tailwind CSS v4 (Advanced @theme inline API), Glassmorphism Design Patterns.
-
-**DevOps & DX:** Custom Reverse Proxies, Native Development Workflow, Multi-Environment Staging (--configuration staging).
-
-**Version Control:** Advanced Git (Rebase/Stash workflow, linear history maintenance).
-
-**Design:** Figma (Design Token Extraction & UI Matching).
+**Core Architecture:** Angular 19 (Standalone Components, Signals, Computed Properties).
+**Resilient Styling:** Tailwind CSS v4 (@theme inline API), Glassmorphism Design Patterns, Defensive CSS.
+**DevOps & DX:** Custom Reverse Proxies, CORS Middleware Optimization, Native Development Workflow.
+**Engineering Workflow:** Advanced Git (Rebase/Stash workflow, Linear History), Figma Token Extraction.
 
