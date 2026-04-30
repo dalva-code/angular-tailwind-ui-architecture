@@ -121,7 +121,10 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 ### 🚀 Key Technologies
 
 **Core Architecture:** Angular 19 (Standalone Components, Signals, Computed Properties).
+
 **Resilient Styling:** Tailwind CSS v4 (@theme inline API), Glassmorphism Design Patterns, Defensive CSS.
+
 **DevOps & DX:** Custom Reverse Proxies, CORS Middleware Optimization, Native Development Workflow.
+
 **Engineering Workflow:** Advanced Git (Rebase/Stash workflow, Linear History), Figma Token Extraction.
 
