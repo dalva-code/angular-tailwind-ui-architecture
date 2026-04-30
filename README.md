@@ -22,6 +22,8 @@ CSS Grid structures collapsed and shifted horizontally when expected DOM nodes w
 
 Server-Side Rendering (SSR) hydration flashes occurred where the server rendered correct data, but the client-side re-hydration wiped the state due to mismatched JSON keys (socialMedia vs social_media). Furthermore, logarithmic calculations for artist scoring required non-zero values (e.g., || 1), which accidentally bled into the UI layer, replacing zero-states with invisible data.
 
+**6. Multi-Metric Data Sorting & Null Handling:** With a database of 800+ artists, the UI required a way to sort by multiple metrics (Spotify listeners, YouTube subs, etc.). The challenge was handling "dirty data": how to sort mathematically when some fields are `null`, `0`, or `"Coming Soon"` without pushing valuable data to the bottom of the list incorrectly.
+
 ## 💡 The Solutions 
 
 **1. 3-Layer Design Token Engine (CSS Architecture)**
@@ -65,9 +67,8 @@ To resolve the hydration flashes and UI data bleeding, I decoupled the mathemati
 }
 ```
 
-**7. Native-First DX & Reverse Proxying**
-
-I migrated the workflow from Docker-heavy environments to a Native-First approach. By implementing a Custom Reverse Proxy (proxy.conf.json), I enabled the local Angular environment to communicate securely with Staging APIs, bypassing CORS and reducing HSR (Hot Suite Reload) time from minutes to milliseconds.
+**7. Native-First DX & Reverse Proxying (CORS Resolution)**
+I migrated the workflow from Docker-heavy environments to a Native-First approach. By implementing a Custom Reverse Proxy (proxy.conf.json) and refactoring the Express.js CORS middleware to support dynamic whitelisting, I enabled the local Angular environment to communicate securely with Staging APIs, bypassing CORS blocks and reducing HSR (Hot Suite Reload) time from minutes to milliseconds.
 
 **8. Silent Failure Mitigation & Resilient States**
 
@@ -84,6 +85,13 @@ Configuration Isolation: Strict environment hygiene to ensure local-only files (
 **10. Stakeholder-Driven Navigation Refactoring**
 
 Responding to business requirements, I decoupled the navigation logic. I elevated "Charts" to a primary architectural level and used Angular Declarative Routing (routerLinkActive) to provide real-time visual feedback on user location within the analytics group.
+
+**11. Signal-Based Multi-Directional Sorting Logic**
+To handle high-performance table re-ordering, I engineered a sorting engine using Angular Signals and Computed properties.
+- **Logic:** The engine detects data types (numerical vs. string handles) and applies a custom `Null-Sink` algorithm.
+- **Result:** This ensures that "dirty" values (N/A or 0) are mathematically forced to the end of the list regardless of sort direction, maintaining a premium look for the Top Rankings at all times.
+
+
 
 ## 📸 Visual Impact: Figma-to-Code Execution
 
@@ -108,13 +116,16 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 *(Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).*
 
 
+
+
 ### 🚀 Key Technologies
-Frontend Core: Angular 19 (Standalone Components, Signals, Computed Properties).
+**Frontend Core:** Angular 19 (Standalone Components, Signals, Computed Properties).
 
-Styling: Tailwind CSS v4 (Advanced @theme inline API), Glassmorphism Design Patterns.
+**Styling:** Tailwind CSS v4 (Advanced @theme inline API), Glassmorphism Design Patterns.
 
-DevOps & DX: Custom Reverse Proxies, Native Development Workflow, Multi-Environment Staging (--configuration staging).
+**DevOps & DX:** Custom Reverse Proxies, Native Development Workflow, Multi-Environment Staging (--configuration staging).
 
-Version Control: Advanced Git (Rebase/Stash workflow, linear history maintenance).
+**Version Control:** Advanced Git (Rebase/Stash workflow, linear history maintenance).
 
-Design: Figma (Design Token Extraction & UI Matching).
+**Design:** Figma (Design Token Extraction & UI Matching).
+
