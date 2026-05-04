@@ -97,7 +97,9 @@ To handle high-performance table re-ordering, I engineered a sorting engine usin
 *   **The Problem**: Moving from static mocks to a live music industry API with inconsistent data structures and complex certification rules (Gold/Platinum/Diamond).
 *   **The Solution**: Developed a **Resilient Data Mapping Layer** in Angular 19. Implemented a priority-based Award Resolver and normalized IDs to `strings` for 100% build stability.
 *   **The Result**: Real-time synchronization of 800+ artist profiles and weekly charts with zero UI crashes.
-*   👉 **[View Full Technical Case Study](./case-studies/production-api-integration.md)**
+*   👉 [**[View Full Technical Case Study**](./case-studies/production-api-integration.md)**
+
+  
 
 
 ## 📸 Visual Impact: Figma-to-Code Execution
@@ -121,6 +123,7 @@ Here is a side-by-side comparison demonstrating the architectural shift from a g
 | *Sanitized profile view using Signal-driven metrics.* | *Refactored sidebar using decoupled navigation logic.* |
 
 *(Confidentiality Note: Logos and proprietary data have been sanitized to comply with NDA policies).*
+
 
 
 
