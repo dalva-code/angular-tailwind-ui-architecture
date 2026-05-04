@@ -98,7 +98,7 @@ To handle high-performance table re-ordering, I engineered a sorting engine usin
 *   **The Solution**: Developed a **Resilient Data Mapping Layer** in Angular 19. Implemented a priority-based Award Resolver and normalized IDs to `strings` for 100% build stability.
 *   **The Result**: Real-time synchronization of 800+ artist profiles and weekly charts with zero UI crashes.
   
-* 👉 [**View Full Technical Case Study**](./case-studies/production-api-integration.md)
+* 👉[**View Full Technical Case Study**](./case-studies/production-api-integration.md)
 
   
 
