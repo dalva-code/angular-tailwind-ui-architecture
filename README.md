@@ -92,6 +92,13 @@ To handle high-performance table re-ordering, I engineered a sorting engine usin
 - **Result:** This ensures that "dirty" values (N/A or 0) are mathematically forced to the end of the list regardless of sort direction, maintaining a premium look for the Top Rankings at all times.
 
 
+### 🚀 Latest Milestone: Production API Integration (Proprietary Analytics)
+
+*   **The Problem**: Moving from static mocks to a live music industry API with inconsistent data structures and complex certification rules (Gold/Platinum/Diamond).
+*   **The Solution**: Developed a **Resilient Data Mapping Layer** in Angular 19. Implemented a priority-based Award Resolver and normalized IDs to `strings` for 100% build stability.
+*   **The Result**: Real-time synchronization of 800+ artist profiles and weekly charts with zero UI crashes.
+*   👉 **[View Full Technical Case Study](./case-studies/production-api-integration.md)**
+
 
 ## 📸 Visual Impact: Figma-to-Code Execution
 
