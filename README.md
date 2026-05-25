@@ -51,7 +51,7 @@ To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark M
   --color-primary: hsl(var(--primary-hsl));
   --color-sidebar: hsl(var(--bg-hsl));
 }
-
+```
 2. Centralized Resilience Engine (The "Bunker Mode")
 I engineered a centralized Feature Flag system using Angular’s environment injection. By decoupling the Data Services from the API layer, I implemented a "Bunker Mode" toggle.
 
