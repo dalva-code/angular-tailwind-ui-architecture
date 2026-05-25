@@ -52,64 +52,60 @@ To resolve the Tailwind v4 compilation errors and achieve a pixel-perfect Dark M
   --color-sidebar: hsl(var(--bg-hsl));
 }
 ```
-2. Centralized Resilience Engine (The "Bunker Mode")
+**2. Centralized Resilience Engine (The "Bunker Mode")**
 I engineered a centralized Feature Flag system using Angular’s environment injection. By decoupling the Data Services from the API layer, I implemented a "Bunker Mode" toggle.
+- **Technical Implementation:** When enabled, the application bypasses failing network requests and serves high-fidelity Mock Data through the same RxJS streams, ensuring a flawless UI presentation even in total offline/error states.
 
-Technical Implementation: When enabled, the application bypasses failing network requests and serves high-fidelity Mock Data through the same RxJS streams, ensuring a flawless UI presentation even in total offline/error states.
+**3. Anti-Collapse Layouts Under Asymmetrical API Payloads**
+I implemented a Defensive CSS Grid strategy. By enforcing strict constraints (`min-w-[80px]`) and persistent DOM nodes, the layout remains immutable regardless of the data payload. I also engineered a "Waterfall Rendering" logic for metrics:
+- **Priority 1:** Display exact metric numbers.
+- **Priority 2:** Fallback to interactive social handles (hyperlinks) if numbers are missing.
+- **Priority 3:** Render elegant "Coming Soon" or "N/A" states.
 
-3. Anti-Collapse Layouts Under Asymmetrical API Payloads
-I implemented a Defensive CSS Grid strategy. By enforcing strict constraints (min-w-[80px]) and persistent DOM nodes, the layout remains immutable regardless of the data payload. I also engineered a "Waterfall Rendering" logic for metrics:
-Priority 1: Display exact metric numbers.
-Priority 2: Fallback to interactive social handles (hyperlinks) if numbers are missing.
-Priority 3: Render elegant "Coming Soon" or "N/A" states.
 This ensures a seamless UX that adapts dynamically to the depth of the available data without breaking the visual hierarchy.
 
-4. Mathematical State vs. UI State Separation
+**4. Mathematical State vs. UI State Separation**
 To resolve the hydration flashes and UI data bleeding, I decoupled the mathematical computational state from the visual UI state. Complex formulas (like logarithmic artist scoring) inherently require sanitized, non-zero values to prevent NaN crashes. I refactored the data-mapping layer to calculate and store these safe values exclusively for backend mathematical use, while passing the raw, unmodified data (including zeroes or nulls) to the Angular presentation components. This eliminated false UI states and stabilized the client-side hydration process.
 
-5. Native-First DX & Reverse Proxying (CORS Resolution)
-I migrated the workflow from Docker-heavy environments to a Native-First approach. By implementing a Custom Reverse Proxy (proxy.conf.json) and refactoring the Express.js CORS middleware to support dynamic whitelisting, I enabled the local Angular environment to communicate securely with Staging APIs, bypassing CORS blocks and reducing HSR (Hot Suite Reload) time from minutes to milliseconds.
+**5. Native-First DX & Reverse Proxying (CORS Resolution)**
+I migrated the workflow from Docker-heavy environments to a Native-First approach. By implementing a Custom Reverse Proxy (`proxy.conf.json`) and refactoring the Express.js CORS middleware to support dynamic whitelisting, I enabled the local Angular environment to communicate securely with Staging APIs, bypassing CORS blocks and reducing HSR (Hot Suite Reload) time from minutes to milliseconds.
 
-6. Silent Failure Mitigation & Resilient States
+**6. Silent Failure Mitigation & Resilient States**
 I refactored critical components to implement Silent Failure Patterns. For instance, the Ad-Placement engine was updated to catch 403 errors gracefully, ensuring that an invalid API key in a sub-service never compromises the stability or the visual integrity of the main dashboard.
 
-7. Advanced Git Flow & Environment Hygiene
+**7. Advanced Git Flow & Environment Hygiene**
 To maintain a high-quality codebase in a multi-developer team, I implemented:
-Linear History Management: Systematic use of Git Rebase and Git Stash to resolve upstream tracking deltas and clean workspace histories without polluting tracking trees.
+- **Linear History Management:** Systematic use of `Git Rebase` and `Git Stash` to resolve upstream tracking deltas and clean workspace histories without polluting tracking trees.
+- **Configuration Isolation:** Strict environment hygiene to ensure local-only files (`proxy.conf.json`, Docker overrides, `.env` shields) remain untracked, protecting the production deployment pipelines.
 
-Configuration Isolation: Strict environment hygiene to ensure local-only files (proxy.conf.json, Docker overrides, .env shields) remain untracked, protecting the production deployment pipelines.
+**8. Stakeholder-Driven Navigation Refactoring**
+Responding to business requirements, I decoupled the navigation logic. I elevated "Charts" to a primary architectural level and used Angular Declarative Routing (`routerLinkActive`) to provide real-time visual feedback on user location within the analytics group.
 
-8. Stakeholder-Driven Navigation Refactoring
-Responding to business requirements, I decoupled the navigation logic. I elevated "Charts" to a primary architectural level and used Angular Declarative Routing (routerLinkActive) to provide real-time visual feedback on user location within the analytics group.
-
-9. Signal-Based Multi-Directional Sorting Logic
+**9. Signal-Based Multi-Directional Sorting Logic**
 To handle high-performance table re-ordering, I engineered a sorting engine using Angular Signals and Computed properties.
+- **Logic:** The engine intelligently discerns between data types (numerical vs. string handles) and applies a custom `Null-Sink` algorithm.
+- **Result:** This ensures that "dirty" values (N/A or 0) are mathematically forced to the end of the list regardless of sort direction, maintaining a premium look for the Top Rankings at all times.
 
-Logic: The engine intelligently discerns between data types (numerical vs. string handles) and applies a custom Null-Sink algorithm.
-Result: This ensures that "dirty" values (N/A or 0) are mathematically forced to the end of the list regardless of sort direction, maintaining a premium look for the Top Rankings at all times.
+**10. State-Driven Contextual Taxonomy (Dynamic Metric Systems)**
+Refactored the spotlight layout architecture using Angular 19's `@switch` blocks driven by the `timeRange()` signal. The interface now mutates its analytical terminology dynamically (`'1W'` -> "Weekly Leader", `'1M'` -> "Monthly Leader", `'3M'` -> "Quarterly Leader"), recalculating descriptive tooltips in real-time to align precisely with the active data subset.
 
-10. State-Driven Contextual Taxonomy (Dynamic Metric Systems)
-Refactored the spotlight layout architecture using Angular 19's @switch blocks driven by the timeRange() signal. The interface now mutates its analytical terminology dynamically ('1W' -> "Weekly Leader", '1M' -> "Monthly Leader", '3M' -> "Quarterly Leader"), recalculating descriptive tooltips in real-time to align precisely with the active data subset.
-
-11. Multi-Artist Multi-Directional Gateway Form
+**11. Multi-Artist Multi-Directional Gateway Form**
 Engineered a declarative selection modal for multi-artist entries within the Top Gainer and Leader cards. When a collaborative track is clicked, the application triggers an auxiliary gateway listing the artists as individual, interactive cards (matching the global design tokens). This mitigates target bleeding, giving users explicit choice over their navigation vector.
 
-12. Strategic Mobile Layout Real Estate Optimization
-Overhauled the global layout shell to transition seamlessly from desktop sidebars to a custom, full-screen mobile menu overlay (fixed inset-0 z-[100]) managed via reactive signals.
+**12. Strategic Mobile Layout Real Estate Optimization**
+Overhauled the global layout shell to transition seamlessly from desktop sidebars to a custom, full-screen mobile menu overlay (`fixed inset-0 z-[100]`) managed via reactive signals.
+- **Real Estate Optimization:** Decreased horizontal screen padding from 24px to exactly 8px (`px-2`) on mobile viewports, rescuing 15% of horizontal space and stopping layout compressing on data-dense tables.
+- **Ergonomic UX Mapping:** Applied an inverted Flexbox layout (`flex-col` + `mt-auto`) to anchor core authentication actions ("Sign-in") and session profiles to the base of the viewport, optimizing for the natural thumb-reach zone on mobile devices.
 
-Real Estate Optimization: Decreased horizontal screen padding from 24px to exactly 8px (px-2) on mobile viewports, rescuing 15% of horizontal space and stopping layout compressing on data-dense tables.
+---
 
-Ergonomic UX Mapping: Applied an inverted Flexbox layout (flex-col + mt-auto) to anchor core authentication actions ("Sign-in") and session profiles to the base of the viewport, optimizing for the natural thumb-reach zone on mobile devices.
+### 🚀 Latest Milestone: Production API Integration (Proprietary Analytics)
 
-🚀 Latest Milestone: Production API Integration (Proprietary Analytics)
+- **The Problem:** Moving from static mocks to a live music industry API with inconsistent data structures and complex certification rules (Gold/Platinum/Diamond).
+- **The Solution:** Developed a **Resilient Data Mapping Layer** in Angular 19. Implemented a priority-based Award Resolver and normalized IDs to `strings` for 100% build stability.
+- **The Result:** Real-time synchronization of 800+ artist profiles and weekly charts with zero UI crashes.
 
-The Problem: Moving from static mocks to a live music industry API with inconsistent data structures and complex certification rules (Gold/Platinum/Diamond).
-
-The Solution: Developed a Resilient Data Mapping Layer in Angular 19. Implemented a priority-based Award Resolver and normalized IDs to strings for 100% build stability.
-
-The Result: Real-time synchronization of 800+ artist profiles and weekly charts with zero UI crashes.
-
-👉 View Full Technical Case Study
+👉 [**View Full Technical Case Study**](./case-studies/production-api-integration.md)
 
   
 
