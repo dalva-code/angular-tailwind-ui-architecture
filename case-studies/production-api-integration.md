@@ -1,7 +1,7 @@
 # Case Study: Production API Integration & Resilient Data Mapping
 
 ## 📌 Context
-Integration of the production analytics API for the "Label MBA" platform. This phase focused on migrating from a mock-based environment to a real-time data stream for 800+ artist profiles and weekly industry charts.
+Integration of the production analytics API for the "M-Academy" platform. This phase focused on migrating from a mock-based environment to a real-time data stream for 800+ artist profiles and weekly industry charts.
 
 ## 🛠️ The Technical Challenges
 
